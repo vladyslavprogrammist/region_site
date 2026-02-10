@@ -1,0 +1,272 @@
+<!DOCTYPE html>
+<html lang="uk">
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width,initial-scale=1" />
+<title>Регіональний навчально-практичний центр підготовки мулярів - Чернігів</title>
+<style>
+:root{
+  --accent: #004085;
+  --accent-2: #007bff;
+  --muted: #6c757d;
+  --bg: #f5f7fb;
+  --card: #ffffff;
+  --success: #28a745;
+  --radius: 10px;
+  --container-w: 1100px;
+}
+*{ box-sizing:border-box; }
+body{
+  margin:0;
+  font-family:Arial,sans-serif;
+  color:#222;
+  line-height:1.5;
+  padding:1rem;
+  display:flex;
+  justify-content:center;
+  background-color:#b35c3b;
+  background-image:
+    linear-gradient(90deg,#d77b5c 25%,transparent 25%,transparent 50%,#d77b5c 50%,#d77b5c 75%,transparent 75%,transparent),
+    linear-gradient(#d77b5c 12.5%,transparent 12.5%,transparent 25%,#d77b5c 25%,#d77b5c 37.5%,transparent 37.5%,transparent 50%,#d77b5c 50%,#d77b5c 62.5%,transparent 62.5%,transparent 75%,#d77b5c 75%,#d77b5c 87.5%,transparent 87.5%,transparent);
+  background-size:60px 30px;
+}
+.wrap{
+  width:100%;
+  max-width:var(--container-w);
+  background:rgba(255,255,255,0.85);
+  border-radius:12px;
+  box-shadow:0 8px 28px rgba(10,20,40,0.08);
+  overflow:hidden;
+  margin:1rem;
+  backdrop-filter:blur(3px);
+}
+.hero{position:relative;overflow:hidden;min-height:320px;display:grid;grid-template-columns:1fr;align-items:center;}
+.hero .hero-media{position:absolute;inset:0;z-index:0;}
+.hero .hero-media img{width:100%;height:100%;object-fit:cover;filter:saturate(1.05) contrast(1.02);}
+.hero::before{content:"";position:absolute;inset:0;background:rgba(0,0,0,0.35);z-index:1;}
+.hero-content{position:relative;z-index:2;padding:2rem;color:#fff;max-width:900px;margin:auto;}
+.hero-title{margin:0 0 .5rem 0;font-size:1.75rem;font-weight:700;text-shadow:2px 2px 8px rgba(0,0,0,0.8);transition: transform 0.3s ease, text-shadow 0.3s ease;}
+.hero-sub{margin:0 0 1rem 0;font-size:1.05rem;text-shadow:2px 2px 8px rgba(0,0,0,0.8);transition: transform 0.3s ease, text-shadow 0.3s ease;}
+.hero-title:hover{transform: scale(1.05);text-shadow:3px 3px 12px rgba(0,0,0,0.9);}
+.hero-sub:hover{transform: scale(1.03);text-shadow:2px 2px 10px rgba(0,0,0,0.85);}
+.hero-cta{display:flex;gap:.75rem;flex-wrap:wrap;align-items:center;}
+.btn{display:inline-flex;align-items:center;gap:.55rem;padding:.65rem 1rem;border-radius:8px;font-weight:600;cursor:pointer;border:none;text-decoration:none;color:#fff;background:var(--accent-2);}
+.btn.secondary{background:var(--accent);border:1px solid rgba(255,255,255,0.12);}
+.teaser{min-height:80vh;display:flex;flex-direction:column;justify-content:center;align-items:center;text-align:center;font-size:1.2rem;line-height:1.8;padding:1rem 2rem;transition: all 0.4s ease;}
+.content{padding:1.25rem 2rem 2rem 2rem;display:none;opacity:0;transition: opacity 0.6s ease;}
+.content.show{display:block;opacity:1;}
+h2{color:var(--accent);margin:0 0 .5rem 0;font-size:1.05rem;}
+p{margin:0 0 .75rem 0;}
+ul{margin:0 0 .75rem 1.25rem;}
+.section{margin-bottom:1.25rem;}
+.gallery{display:flex;gap:.5rem;flex-wrap:wrap;}
+.gallery .item{flex:1 1 calc(50% - .5rem);min-width:210px;}
+.gallery img{width:100%;height:auto;border-radius:8px;display:block;}
+.highlight{background:#eef3fb;padding:1rem;border-left:6px solid var(--accent-2);border-radius:8px;}
+footer{padding:1rem 2rem 2rem 2rem;color:var(--muted);}
+form label{display:block;font-size:.95rem;margin:.6rem 0 .25rem 0;color:#222;}
+form input, form textarea{width:100%;padding:.6rem .75rem;border-radius:8px;border:1px solid #d0d7de;font-size:.95rem;margin-bottom:0.75rem;}
+form button{padding:.65rem 1rem;border:none;border-radius:8px;background:var(--accent-2);color:#fff;cursor:pointer;font-weight:600;}
+form button:hover{background:var(--accent);}
+.radio-group{display:flex;flex-wrap:wrap;gap:1rem;margin-bottom:0.75rem;}
+.radio-group label{display:flex;align-items:center;gap:0.3rem;cursor:pointer;}
+.radio-group input[type="radio"]{margin:0;}
+.checkbox-label{display:flex;align-items:center;gap:.5rem;margin-bottom:.75rem;cursor:pointer;}
+.checkbox-label input[type="checkbox"]{margin:0;width:18px;height:18px;}
+.phone-email-row{display:flex;gap:1rem;flex-wrap:wrap;}
+.phone-email-row input{flex:1;}
+@media(max-width:920px){.hero-content{padding:1.25rem;text-align:center;}.hero-title{font-size:1.45rem;}.hero-sub{font-size:1rem;}.gallery .item{flex-basis:100%;}}
+@media(max-width:600px){.hero{min-height:260px;}.hero-title{font-size:1.2rem;}.hero-sub{font-size:.95rem;}.wrap{margin:.5rem;border-radius:8px;}.content{padding:1rem;}footer{padding:1rem;}.teaser{margin:.5rem 1rem;padding:.75rem;}}
+</style>
+</head>
+<body>
+<div class="wrap">
+<section class="hero">
+  <div class="hero-media"><img src="regional2.jpg" alt="Учні та майстер у центрі мулярів"></div>
+  <div class="hero-content">
+    <h1 class="hero-title">Регіональний навчально-практичний центр підготовки мулярів — місто Чернігів</h1>
+    <p class="hero-sub">Освіта, що будує майбутнє — практичні заняття під наглядом досвідчених майстрів.</p>
+    <div class="hero-cta">
+      <button class="btn" id="openSignup">Записатися</button>
+      <button class="btn secondary" id="toggleBtn">Дізнатися більше</button>
+    </div>
+  </div>
+</section>
+
+<div class="teaser" id="teaser">
+🧱 Цікаво: Щорічно наш центр готує понад 150 майбутніх мулярів!<br><br>
+🏗 Учні працюють на реальних об’єктах вже з першого місяця навчання.<br><br>
+🛠 Практичні навички роботи з сучасними будівельними матеріалами та інструментами.<br><br>
+🎯 Більше 90% випускників знаходять роботу в будівельних компаніях за фахом.<br><br>
+🌍 Співпраця з міжнародними проєктами та обмін досвідом.<br><br>
+📚 Сучасна теоретична база та практичні знання.<br><br>
+🏅 Участь у конкурсах професійної майстерності та нагороди.<br><br>
+💡 Щороку впроваджуються нові технології та матеріали.<br><br>
+🎉 Дружня атмосфера та підтримка кожного учня.<br><br>
+🌟 Муляр — це шанс створювати майбутнє будівельної галузі.
+</div>
+
+<main class="content" id="mainContent">
+<section class="section" aria-labelledby="who">
+<h2 id="who">👥 Хто може навчатися у центрі</h2>
+<ul>
+<li>Учні та студенти ПТНЗ і ВНЗ</li>
+<li>Майстри та викладачі</li>
+<li>Працівники будівельних компаній</li>
+<li>Незайняті особи</li>
+<li>Дорослі, які хочуть набути нову професію</li>
+</ul>
+</section>
+
+<section class="section" aria-labelledby="courses">
+<h2 id="courses">🎓 Курси та мікрокваліфікації</h2>
+<ul>
+<li><strong>Основи мурування стін і перегородок</strong><i>(термін навчання 5 днів, орієнтовна вартість 1250 гривень)</i></li>
+<li><strong>Улаштування перегородок з цегли та газоблоків</strong><i>(термін навчання 4 дні, орієнтовна вартість 1000 гривень)</i></li>
+<li><strong>Кладка зовнішніх стін з лицьової цегли</strong><i>(термін навчання 4 дні, орієнтовна вартість 1000 гривень)</i></li>
+<li><strong>Кладка з газобетонних та пінобетонних блоків</strong><i>(термін навчання 4 дні, орієнтовна вартість 1000 гривень)</i></li>
+</ul>
+<p><strong>Після завершення курсу — сертифікат закладу освіти.</strong></p>
+</section>
+
+<section class="section" aria-labelledby="services">
+<h2 id="services">🧰 Виробничі послуги</h2>
+<ul>
+<li>Кладка стін і перегородок</li> 
+<li>Облицювання фасадів</li>
+<li>Улаштування перегородок з цегли та газоблоків</li>
+<li>Роботи з газобетоном, пінобетоном</li>
+<li>Виконання декоративних кладок</li>
+</ul>
+</section>
+
+<section class="section highlight">
+<h2>✅ Чому варто обрати наш центр?</h2>
+<ul>
+<li>Сучасна технічна база</li>
+<li>Професійні викладачі</li>
+<li>Навчання на реальних об’єктах</li>
+<li>Можливість працевлаштування</li>
+</ul>
+</section>
+
+<section class="section" aria-labelledby="gallery">
+<h2 id="gallery">Фото з центру</h2>
+<div class="gallery">
+<div class="item"><img src="regional.png" alt="Інструменти та стенд"></div>
+<div class="item"><img src="regional1.png" alt="Учні за практикою"></div>
+</div>
+</section>
+
+<section class="section" id="signupSection">
+<h2>📝 Записатися на курс</h2>
+<form id="signupForm" action="https://formspree.io/f/mpwkqypn" method="POST">
+<label for="name">Ім'я та прізвище *</label>
+<input id="name" name="name" required placeholder="Іван Іванович" />
+
+<label for="birth">День, місяць, рік народження *</label>
+<input type="date" id="birth" name="birth" required />
+
+<label for="address">Ваша домашня адреса (повна адреса) *</label>
+<input type="text" id="address" name="address" required placeholder="м. Чернігів, вул. Шевченка, 12" />
+
+<label>Освіта *</label>
+<div class="radio-group">
+<label><input type="radio" name="education" value="Вища" required> <span>Вища</span></label>
+<label><input type="radio" name="education" value="Професійно-технічна"> <span>Професійна (ПТНЗ)</span></label>
+<label><input type="radio" name="education" value="11 класів"> <span>Повна загальна середня (11 кл.)</span></label>
+<label><input type="radio" name="education" value="9 класів"> <span>Базова загальна середня (9 кл.)</span></label>
+</div>
+
+<label for="school">Назва навчального закладу, де навчаєтесь або який закінчили *</label>
+<input type="text" id="school" name="school" required placeholder="Назва навчального закладу" />
+
+<label for="work">Місце роботи *</label>
+<input type="text" id="work" name="work" required placeholder="Будівельна компанія 'БудМонтаж'" />
+
+<div class="phone-email-row">
+  <div>
+    <label for="phone">Номер телефону *</label>
+    <input type="tel" id="phone" name="phone" required placeholder="+380 XX XXX XX XX" pattern="\+380\d{9}" oninput="formatPhone(this)">
+  </div>
+  <div>
+    <label for="email">Поштова скринька *</label>
+    <input type="email" id="email" name="email" required placeholder="example@mail.com">
+  </div>
+</div>
+
+<label class="checkbox-label">
+<input type="checkbox" name="consent" required>
+Даю згоду на обробку персональних даних *
+</label>
+
+<button type="submit" class="btn">Відправити</button>
+</form>
+</section>
+
+<footer>
+<p><strong>Муляр — це не просто робота, це професія, яка формує майбутнє.</strong></p>
+<p class="small">Для запису телефонуйте: 067-967-11-61 чи залишайте заявку у формі <i>Записатися</i>. <strong>Владислав Васильович</strong> — завідувач регіонального центру мулярів</p>
+</footer>
+</main>
+</div>
+
+<script>
+const mainContent = document.getElementById('mainContent');
+const teaser = document.getElementById('teaser');
+const toggleBtn = document.getElementById('toggleBtn');
+const openBtn = document.getElementById('openSignup');
+const signupSection = document.getElementById('signupSection');
+const form = document.getElementById('signupForm');
+
+toggleBtn.addEventListener('click', () => {
+  if(mainContent.classList.contains('show')){
+    mainContent.classList.remove('show');
+    teaser.style.display='flex';
+    toggleBtn.textContent="Дізнатися більше";
+    teaser.scrollIntoView({behavior:'smooth'});
+  } else {
+    mainContent.classList.add('show');
+    teaser.style.display='none';
+    toggleBtn.textContent="Сховати";
+    mainContent.scrollIntoView({behavior:'smooth'});
+  }
+});
+
+openBtn.addEventListener('click', () => {
+  if(!mainContent.classList.contains('show')){
+    mainContent.classList.add('show');
+    teaser.style.display='none';
+    toggleBtn.textContent="Сховати";
+  }
+  signupSection.scrollIntoView({behavior:'smooth'});
+  document.getElementById('name')?.focus();
+});
+
+form.addEventListener('submit', async(e)=>{
+  e.preventDefault();
+  const data = new FormData(form);
+  try{
+    const response = await fetch(form.action,{
+      method: form.method,
+      body: data,
+      headers:{'Accept':'application/json'}
+    });
+    if(response.ok){
+      alert("✅ Дякуємо, ваша заявка отримана!");
+      form.reset();
+    } else { throw new Error("Помилка сервера"); }
+  } catch(err){
+    alert("❌ Сталася помилка, спробуйте ще раз.");
+  }
+});
+
+// Функція для форматування телефону +380
+function formatPhone(input){
+  let val = input.value.replace(/\D/g,''); // лиш цифри
+  if(!val.startsWith('380')) val='380'+val.replace(/^0+/,'');
+  input.value='+'+val.slice(0,12);
+}
+</script>
+</body>
+</html>
